@@ -1,5 +1,3 @@
-const https = require("https");
-const fs = require("fs");
 const express = require("express");
 const webPush = require("web-push");
 const bodyParser = require("body-parser");
@@ -103,13 +101,7 @@ app.post("/send-push", (req, res) => {
     .catch((err) => res.status(500).json({ error: "Failed to send push notifications" }));
 });
 
-// Load SSL/TLS certificates for HTTPS
-const options = {
-  key: fs.readFileSync('ssl/localhost.key'),
-  cert: fs.readFileSync('ssl/localhost.crt'),
-};
-
-// Start the HTTPS server with the provided options
-https.createServer(options, app).listen(port, () => {
-  console.log(`Server running on https://localhost:${port}`);
+// Start the HTTP server instead of HTTPS
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
