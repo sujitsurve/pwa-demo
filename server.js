@@ -14,6 +14,8 @@ const pushSubscriptions = [];
 const allowedOrigins = [
   "http://localhost:3000",
   "https://localhost:3000",
+  /^http:\/\/\d+\.\d+\.\d+\.\d+:3000$/,
+  /^https:\/\/\d+\.\d+\.\d+\.\d+:3000$/  // Allows any IP address with port 3000 for HTTPS
 ];
 
 // CORS setup to allow requests from these origins
