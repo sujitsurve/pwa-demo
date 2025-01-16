@@ -12,7 +12,8 @@ const pushSubscriptions = [];
 
 // Allowed origins for CORS (replace with actual URLs)
 const allowedOrigins = [
-  "https://pwa-demo-gku9.onrender.com"
+  "https://pwa-demo-gku9.onrender.com",
+  "https://pwa-front-end-demo.onrender.com",  // Added this origin
 ];
 
 // CORS setup to allow requests from these origins
@@ -103,5 +104,5 @@ app.post("/send-push", (req, res) => {
 
 // Start the HTTP server instead of HTTPS
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running...!!`);
 });
