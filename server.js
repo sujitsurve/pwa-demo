@@ -12,7 +12,7 @@ const pushSubscriptions = [];
 
 // Allowed origins for CORS (replace with actual URLs)
 const allowedOrigins = [
-  "https://pwa-demo-gku9.onrender.com"/  // Allows any IP address with port 3000 for HTTPS
+  "https://pwa-demo-gku9.onrender.com"
 ];
 
 // CORS setup to allow requests from these origins
