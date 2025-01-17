@@ -13,6 +13,7 @@ const pushSubscriptions = [];
 // Allowed origins for CORS (replace with actual URLs)
 const allowedOrigins = [
   "https://pwa-demo-gku9.onrender.com",
+  "http://localhost:3000",
   "https://pwa-front-end-demo.onrender.com",  // Added this origin
 ];
 
